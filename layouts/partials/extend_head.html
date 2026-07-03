@@ -1,4 +1,17 @@
-<!-- 自定义head扩展：SEO优化、统计分析等 -->
+<!-- 极效AI SEO增强 -->
+<meta name="author" content="极效AI">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="baidu_spider" content="index, follow">
+
+<!-- Open Graph增强 -->
+<meta property="og:site_name" content="极效AI">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jixiaoai">
 
 <!-- 结构化数据：组织信息 -->
 <script type="application/ld+json">
@@ -7,31 +20,31 @@
   "@type": "WebSite",
   "name": "极效AI",
   "url": "https://lanku2200.github.io/jixiaoai/",
-  "description": "快速知晓AI圈最新动态及工具组合",
+  "description": "快速知晓AI圈最新动态及工具组合 - AI工具导航、AI资讯、AI教程",
   "potentialAction": {
     "@type": "SearchAction",
     "target": "https://lanku2200.github.io/jixiaoai/search/?q={search_term_string}",
     "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "极效AI",
+    "url": "https://lanku2200.github.io/jixiaoai/"
   }
 }
 </script>
 
-<!-- 百度统计（替换为你的百度统计代码） -->
-<!-- <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?YOUR_BAIDU_ANALYTICS_ID";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-</script> -->
-
-<!-- Google Analytics（替换为你的GA ID） -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<!-- 百度自动推送 -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script> -->
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>

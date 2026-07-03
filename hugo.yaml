@@ -8,7 +8,6 @@ buildDrafts: false
 pagination:
   pagerSize: 12
 
-# SEO 相关
 enableEmoji: true
 enableInlineShortcodes: true
 
@@ -24,37 +23,68 @@ markup:
   highlight:
     noClasses: false
 
-# 输出格式（支持搜索页等）
 outputs:
   home:
     - HTML
     - RSS
     - JSON
 
-# 全局参数
 params:
   env: production
   title: 极效AI
-  description: "快速知晓AI圈最新动态及工具组合 - AI工具导航、AI新闻资讯、AI实战教程"
-  keywords: [AI工具, AI导航, AI新闻, ChatGPT, 人工智能, AI教程, AI效率, AIGC, 大模型]
+  description: "极效AI - 快速知晓AI圈最新动态及工具组合。精选AI工具导航、实时AI资讯、实战AI教程，每天3分钟掌握AI前沿。"
+  keywords: [AI工具, AI导航, AI新闻, ChatGPT, Claude, Midjourney, 人工智能, AI教程, AI效率, AIGC, 大模型, DeepSeek, 通义千问, AI写作, AI绘画, AI视频]
   author: "极效AI"
-  
-  # 首页模式
+
   homeInfoParams:
     Title: "🚀 极效AI"
     Content: >
-      **快速知晓AI圈最新动态及工具组合**
-      
-      精选AI工具导航 · 实时AI行业资讯 · 实战AI教程
-      
-      每天3分钟，掌握AI前沿动态
+      <div class="hero-banner">
+      <p class="hero-desc">快速知晓AI圈最新动态及工具组合</p>
+      <div class="hero-tags">
+      <span class="hero-tag">🔧 精选AI工具</span>
+      <span class="hero-tag">📰 实时资讯</span>
+      <span class="hero-tag">📚 实战教程</span>
+      <span class="hero-tag">⚡ 每天3分钟</span>
+      </div>
+      </div>
 
-  # 社交链接
+      <div class="category-grid">
+      <a href="/tools/" class="category-card card-tools">
+      <div class="card-icon">🔧</div>
+      <div class="card-title">AI工具导航</div>
+      <div class="card-desc">精选优质AI工具，按场景分类，一键直达</div>
+      </a>
+      <a href="/posts/" class="category-card card-news">
+      <div class="card-icon">📰</div>
+      <div class="card-title">AI资讯速递</div>
+      <div class="card-desc">每日跟踪全球AI行业新闻与产品发布</div>
+      </a>
+      <a href="/tutorials/" class="category-card card-tutorials">
+      <div class="card-icon">📚</div>
+      <div class="card-title">实战教程</div>
+      <div class="card-desc">从零开始的AI工具使用教程，小白友好</div>
+      </a>
+      </div>
+
+      <div class="hot-tools">
+      <h3>🔥 热门AI工具</h3>
+      <div class="hot-grid">
+      <a href="/tools/chatgpt/" class="hot-item">💬 ChatGPT</a>
+      <a href="/tools/claude/" class="hot-item">🧠 Claude</a>
+      <a href="/tools/midjourney/" class="hot-item">🎨 Midjourney</a>
+      <a href="/tools/cursor/" class="hot-item">💻 Cursor</a>
+      <a href="/tools/deepseek/" class="hot-item">🔍 DeepSeek</a>
+      <a href="/tools/tongyi/" class="hot-item">🤖 通义千问</a>
+      </div>
+      </div>
+
   socialIcons:
     - name: "RSS"
       url: "index.xml"
+    - name: "github"
+      url: "https://github.com/lanku2200/jixiaoai"
 
-  # 搜索功能
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -64,7 +94,6 @@ params:
     minMatchCharLength: 0
     keys: ["title", "permalink", "tags", "content"]
 
-  # 主题设置
   defaultTheme: auto
   ShowShareButtons: true
   ShowReadingTime: true
@@ -74,14 +103,11 @@ params:
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
   TocOpen: false
+  hideFooter: false
 
-  # 评论区（可选，后续配置）
-  # comments: true
+  assets:
+    favicon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"
 
-  # 分析统计（后续配置）
-  # googleAnalytics: ""
-
-# 导航菜单
 menu:
   main:
     - name: "🏠 首页"
@@ -96,6 +122,9 @@ menu:
     - name: "📚 教程"
       url: "/tutorials/"
       weight: 15
+    - name: "🔗 友链"
+      url: "/links/"
+      weight: 18
     - name: "🔍 搜索"
       url: "/search/"
       weight: 20
@@ -106,13 +135,11 @@ menu:
       url: "/about/"
       weight: 30
 
-# 分类和标签
 taxonomies:
   category: categories
   tag: tags
   series: series
 
-# 相关页面配置
 related:
   includeNewer: true
   threshold: 60
