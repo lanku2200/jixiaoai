@@ -1,0 +1,54 @@
+name: 自动爬取AI内容
+
+on:
+  schedule:
+    # 每天北京时间 10:00 和 20:00 执行（UTC 02:00 和 12:00）
+    - cron: '0 2 * * *'
+    - cron: '0 12 * * *'
+  workflow_dispatch:  # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  crawl-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 设置Python环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 运行爬虫脚本
+        run: python scripts/auto_content_crawler.py
+
+      - name: 检查是否有新文件
+        id: check_changes
+        run: |
+          if [[ -n "$(git status --porcelain content/posts/)" ]]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 提交新内容
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "Auto Content Bot"
+          git config user.email "auto@jixiaoai.bot"
+          git add content/posts/
+          TIMESTAMP=$(date '+%Y-%m-%d %H:%M')
+          git commit -m "🤖 自动爬取: $TIMESTAMP"
+          git push
+
+      - name: 无新内容
+        if: steps.check_changes.outputs.has_changes == 'false'
+        run: echo "本次爬取未发现新内容"
