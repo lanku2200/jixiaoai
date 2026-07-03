@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://lanku2200.github.io/jixiaoai/sitemap.xml
