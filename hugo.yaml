@@ -50,17 +50,17 @@ params:
       </div>
 
       <div class="category-grid">
-      <a href="/tools/" class="category-card card-tools">
+      <a href="/jixiaoai/tools/" class="category-card card-tools">
       <div class="card-icon">🔧</div>
       <div class="card-title">AI工具导航</div>
       <div class="card-desc">精选优质AI工具，按场景分类，一键直达</div>
       </a>
-      <a href="/posts/" class="category-card card-news">
+      <a href="/jixiaoai/posts/" class="category-card card-news">
       <div class="card-icon">📰</div>
       <div class="card-title">AI资讯速递</div>
       <div class="card-desc">每日跟踪全球AI行业新闻与产品发布</div>
       </a>
-      <a href="/tutorials/" class="category-card card-tutorials">
+      <a href="/jixiaoai/tutorials/" class="category-card card-tutorials">
       <div class="card-icon">📚</div>
       <div class="card-title">实战教程</div>
       <div class="card-desc">从零开始的AI工具使用教程，小白友好</div>
@@ -70,12 +70,12 @@ params:
       <div class="hot-tools">
       <h3>🔥 热门AI工具</h3>
       <div class="hot-grid">
-      <a href="/tools/chatgpt/" class="hot-item">💬 ChatGPT</a>
-      <a href="/tools/claude/" class="hot-item">🧠 Claude</a>
-      <a href="/tools/midjourney/" class="hot-item">🎨 Midjourney</a>
-      <a href="/tools/cursor/" class="hot-item">💻 Cursor</a>
-      <a href="/tools/deepseek/" class="hot-item">🔍 DeepSeek</a>
-      <a href="/tools/tongyi/" class="hot-item">🤖 通义千问</a>
+      <a href="/jixiaoai/tools/chatgpt/" class="hot-item">💬 ChatGPT</a>
+      <a href="/jixiaoai/tools/claude/" class="hot-item">🧠 Claude</a>
+      <a href="/jixiaoai/tools/midjourney/" class="hot-item">🎨 Midjourney</a>
+      <a href="/jixiaoai/tools/cursor/" class="hot-item">💻 Cursor</a>
+      <a href="/jixiaoai/tools/deepseek/" class="hot-item">🔍 DeepSeek</a>
+      <a href="/jixiaoai/tools/tongyi-qianwen/" class="hot-item">🤖 通义千问</a>
       </div>
       </div>
 
