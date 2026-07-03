@@ -1,0 +1,126 @@
+baseURL: "https://lanku2200.github.io/jixiaoai/"
+languageCode: zh-cn
+title: 极效AI
+theme: PaperMod
+defaultContentLanguage: zh
+enableRobotsTXT: true
+buildDrafts: false
+pagination:
+  pagerSize: 12
+
+# SEO 相关
+enableEmoji: true
+enableInlineShortcodes: true
+
+sitemap:
+  changefreq: daily
+  priority: 0.5
+  filename: sitemap.xml
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+# 输出格式（支持搜索页等）
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# 全局参数
+params:
+  env: production
+  title: 极效AI
+  description: "快速知晓AI圈最新动态及工具组合 - AI工具导航、AI新闻资讯、AI实战教程"
+  keywords: [AI工具, AI导航, AI新闻, ChatGPT, 人工智能, AI教程, AI效率, AIGC, 大模型]
+  author: "极效AI"
+  
+  # 首页模式
+  homeInfoParams:
+    Title: "🚀 极效AI"
+    Content: >
+      **快速知晓AI圈最新动态及工具组合**
+      
+      精选AI工具导航 · 实时AI行业资讯 · 实战AI教程
+      
+      每天3分钟，掌握AI前沿动态
+
+  # 社交链接
+  socialIcons:
+    - name: "RSS"
+      url: "index.xml"
+
+  # 搜索功能
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "tags", "content"]
+
+  # 主题设置
+  defaultTheme: auto
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  TocOpen: false
+
+  # 评论区（可选，后续配置）
+  # comments: true
+
+  # 分析统计（后续配置）
+  # googleAnalytics: ""
+
+# 导航菜单
+menu:
+  main:
+    - name: "🏠 首页"
+      url: "/"
+      weight: 1
+    - name: "🔧 AI工具"
+      url: "/tools/"
+      weight: 5
+    - name: "📰 AI资讯"
+      url: "/posts/"
+      weight: 10
+    - name: "📚 教程"
+      url: "/tutorials/"
+      weight: 15
+    - name: "🔍 搜索"
+      url: "/search/"
+      weight: 20
+    - name: "📦 归档"
+      url: "/archives/"
+      weight: 25
+    - name: "ℹ️ 关于"
+      url: "/about/"
+      weight: 30
+
+# 分类和标签
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+# 相关页面配置
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 80
+    - name: date
+      weight: 10

@@ -1,0 +1,95 @@
+/* 极效AI 自定义样式 */
+
+/* 首页标语样式 */
+.home-info .entry-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-info .entry-content h2 {
+    font-size: 1.5em;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* 工具卡片样式 */
+.tool-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    background: var(--entry);
+}
+
+.tool-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+}
+
+/* 导航菜单样式优化 */
+.header nav {
+    font-size: 0.95em;
+}
+
+/* 文章列表优化 */
+.post-entry {
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.post-entry:hover {
+    transform: translateX(4px);
+}
+
+/* 标签颜色 */
+.post-tag {
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.8em;
+}
+
+/* 搜索框优化 */
+.search-input {
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1.1em;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .home-info .entry-content {
+        font-size: 0.95em;
+    }
+}
+
+/* 暗色模式优化 */
+.dark .tool-card:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* 顶部导航栏固定 */
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: var(--theme);
+}
+
+/* 页脚样式 */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+/* 面包屑导航优化 */
+.breadcrumbs {
+    font-size: 0.85em;
+    opacity: 0.7;
+    padding: 8px 0;
+}

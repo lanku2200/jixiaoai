@@ -1,0 +1,13 @@
+# 极效AI robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://lanku2200.github.io/jixiaoai/sitemap.xml
+
+# 百度蜘蛛
+User-agent: Baiduspider
+Allow: /
+
+# Google蜘蛛
+User-agent: Googlebot
+Allow: /
