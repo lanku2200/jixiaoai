@@ -312,3 +312,24 @@
 .top-link:hover {
     border-color: var(--primary);
 }
+
+/* Footer 统计显示 */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer .divider {
+    margin: 0 8px;
+    opacity: 0.5;
+}
+#busuanzi_container_site_pv,
+#busuanzi_container_site_uv {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
